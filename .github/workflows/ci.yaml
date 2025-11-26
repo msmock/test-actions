@@ -38,13 +38,8 @@ jobs:
             echo "$file"
           done
 
-      - name: Deploy changed files in term server
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'https://node-express-tracer.onrender.com/'
-          method: 'POST'
-          username: martin.smock@me.com
-          password: dummy-password
-          customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"data_1": "to be filled in later"}'
-          files: ${{ steps.changed-files.outputs.all_changed_files }}
+      - name: Store files on server
+        run: |
+          for file in ${ALL_CHANGED_FILES}; do
+            curl -X POST -H "Content-Type: application/json" -d '@$file' https://node-express-tracer.onrender.com
+          done
