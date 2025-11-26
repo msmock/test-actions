@@ -30,12 +30,7 @@ jobs:
 
       - name: echo user
         id: echo-user
-        run: echo ${{ github.actor }} ${{github.actor_id}}
-
-      - name: Authenticate with OIDC
-        run: |
-          echo "Configuring OIDC authentication..."
-          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" https://api.github.com/repos/msmock/test-actions/actions/oidc  
+        run: echo ${{ github.actor }} ${{github.actor_id}} ${{ secrets.GITHUB_TOKEN }}
 
       - name: Store changed files
         env:
