@@ -46,4 +46,4 @@ jobs:
           username: martin.smock@me.com
           password: dummy-password
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"key_1": ${ALL_CHANGED_FILES}}'
+          data: '{"files": "to be filled in later"}'
