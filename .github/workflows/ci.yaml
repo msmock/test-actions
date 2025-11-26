@@ -32,6 +32,11 @@ jobs:
         id: echo-user
         run: echo ${{ github.actor }} ${{github.actor_id}}
 
+      - name: Authenticate with OIDC
+        run: |
+          echo "Configuring OIDC authentication..."
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" https://api.github.com/repos/{owner}/{repo}/actions/oidc  
+
       - name: Store changed files
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
