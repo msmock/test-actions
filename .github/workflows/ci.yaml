@@ -1,5 +1,5 @@
 name: CI
-
+run-name: ${{github.actor}} get files changed on main
 on:
   pull_request:
     branches:
@@ -21,6 +21,10 @@ jobs:
       pull-requests: read
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 # v47

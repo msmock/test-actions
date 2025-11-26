@@ -1,6 +1,9 @@
 name: http-request-action
 run-name: ${{github.actor}} push value sets to term server
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   deployment:
     runs-on: ubuntu-latest
