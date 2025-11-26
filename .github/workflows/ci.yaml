@@ -35,7 +35,7 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            if ls *.json 1> /dev/null 2>&1; then
+            if jq empty data.json; then
               echo "store  $file"
               curl -X POST -H "Content-Type: application/json" --data @$file https://node-express-tracer.onrender.com/
             else
