@@ -9,7 +9,7 @@ jobs:
 
   #  - TODO: improve check for json files
   #  - DONE: added api key as bearer token in authorization header.
-  #          The key is stored in the repository Settings -> Secretes and variables -> actions
+  #          The key is stored in the repository Settings -> Secrets and Variables -> Actions
 
   changed_files:
 
