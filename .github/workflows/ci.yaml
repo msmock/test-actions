@@ -30,7 +30,7 @@ jobs:
 
       - name: echo user
         id: echo-user
-        run: echo ${{ github.actor }} ${{github.actor_id}} ${{ secrets.GITHUB_TOKEN }}
+        run: echo ${{ github.actor }} ${{github.actor_id}} ${{ secrets.API_KEY }}
 
       - name: Store changed files
         env:
