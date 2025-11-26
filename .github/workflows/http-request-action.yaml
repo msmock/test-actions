@@ -1,0 +1,16 @@
+name: http-request-action
+run-name: ${{github.actor}} push value sets to term server
+on: [push]
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://node-express-tracer.onrender.com/'
+          method: 'POST'
+          username: martin.smock@me.com
+          password: dummy-password
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"key_1": "value_1", "key_2": "value_2"}'
