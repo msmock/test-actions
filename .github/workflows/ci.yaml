@@ -21,7 +21,8 @@ jobs:
       pull-requests: read
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout main
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
           
@@ -36,3 +37,13 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file"
           done
+
+      - name: Deploy changed files in term server
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://node-express-tracer.onrender.com/'
+          method: 'POST'
+          username: martin.smock@me.com
+          password: dummy-password
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: ${ALL_CHANGED_FILES}
