@@ -30,7 +30,7 @@ jobs:
 
       - name: echo user
         id: echo-user
-        run: echo ${{ github.actor }} ${{github.actor_id}} ${{ secrets.API_KEY }}
+        run: echo ${{ github.actor }} ${{github.actor_id}}
 
       - name: Store changed files
         env:
@@ -39,7 +39,7 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             if [[ $file =~ "json" ]]; then
               echo "store  $file"
-              curl -X POST -H "Content-Type: application/json" --data @$file https://node-express-tracer.onrender.com/
+              curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
             else
               echo "skip $file"
             fi
