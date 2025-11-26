@@ -7,7 +7,9 @@ on:
 
 jobs:
 
-  # TODO add authorization secrets
+  # TODO
+  #  - add authorization secrets
+  #  - improve check for json files
 
   changed_files:
 
@@ -25,6 +27,10 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 # v47
+
+      - name: echo user
+        id: echo-user
+        run: echo ${{ github.actor }} ${{github.actor_id}}
 
       - name: Store changed files
         env:
