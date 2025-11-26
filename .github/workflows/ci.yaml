@@ -36,5 +36,5 @@ jobs:
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             echo "store  $file"
-            curl -X POST --variable %file -H "Content-Type: application/json" --expand-data '@{{file}}' https://node-express-tracer.onrender.com/
+            curl -X POST -H "Content-Type: application/json" --data @$file https://node-express-tracer.onrender.com/
           done
