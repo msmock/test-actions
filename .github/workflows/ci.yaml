@@ -7,9 +7,8 @@ on:
 
 jobs:
 
-  # TODO
-  #  - add authorization secrets
-  #  - improve check for json files
+  #  - DONE: added api key as bearer token in authorization header
+  #  - TODO: improve check for json files
 
   changed_files:
 
