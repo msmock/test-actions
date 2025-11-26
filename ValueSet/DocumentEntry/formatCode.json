@@ -22,7 +22,7 @@
   "name" : "DocumentEntryFormatCode",
   "title" : "DocumentEntry.formatCode",
   "status" : "active",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2025-05-21T19:27:50+00:00",
   "publisher" : "HL7 Switzerland",
   "contact" : [{
