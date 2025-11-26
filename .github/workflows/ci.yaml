@@ -41,6 +41,5 @@ jobs:
       - name: Store files on server
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            curl -X POST -H "Content-Type: application/json" -d '@$file' https://node-express-tracer.onrender.com
-            echo "curled $file"
+            curl -X POST --variable %file -H "Content-Type: application/json" --expand-data '@{{file}}' https://node-express-tracer.onrender.com/
           done
