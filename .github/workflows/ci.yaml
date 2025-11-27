@@ -8,8 +8,6 @@ on:
 jobs:
 
   #  - TODO: improve check for json files
-  #  - DONE: added api key as bearer token in authorization header.
-  #          The key is stored in the repository Settings -> Secrets and Variables -> Actions
 
   changed_files:
 
@@ -39,7 +37,7 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             if [[ $file =~ "json" ]]; then
               echo "store  $file"
-              curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
+              curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
             else
               echo "skip $file"
             fi
