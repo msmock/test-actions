@@ -6,9 +6,7 @@ on:
       - main
 
 jobs:
-
-  #  - TODO: improve check for json files
-
+  
   changed_files:
 
     runs-on: ubuntu-latest  # windows-latest || macos-latest
@@ -35,7 +33,7 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            if [[ $file =~ "json" ]]; then
+            if [[ $file =~ \.json$ ]]; then
               echo "store  $file"
               curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
             else
