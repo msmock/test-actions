@@ -1,0 +1,85 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "allergyintolerance-clinical-supplement",
+  "url" : "http://fhir.ch/ig/ch-allergyintolerance/CodeSystem/allergyintolerance-clinical-supplement",
+  "version" : "3.3.0-ci-build",
+  "name" : "AllergyIntoleranceClinicalStatus",
+  "title" : "CH AllergyIntolerance Clinical Status",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-11-21T10:41:59+00:00",
+  "publisher" : "HL7 Switzerland",
+  "contact" : [{
+    "name" : "HL7 Switzerland",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.hl7.ch/"
+    }]
+  },
+    {
+      "name" : "HL7 Switzerland",
+      "telecom" : [{
+        "system" : "url",
+        "value" : "https://www.hl7.ch/",
+        "use" : "work"
+      }]
+    }],
+  "description" : "Code supplement with translations of CHAllergyIntolerance clinical status",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "CH"
+    }]
+  }],
+  "copyright" : "CC0-1.0",
+  "content" : "supplement",
+  "supplements" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|1.0.1",
+  "concept" : [{
+    "code" : "active",
+    "display" : "Active",
+    "designation" : [{
+      "language" : "de-CH",
+      "value" : "Aktiv"
+    },
+      {
+        "language" : "fr-CH",
+        "value" : "Actif"
+      },
+      {
+        "language" : "it-CH",
+        "value" : "Attiva"
+      }]
+  },
+    {
+      "code" : "inactive",
+      "display" : "Inactive",
+      "designation" : [{
+        "language" : "de-CH",
+        "value" : "Inaktiv"
+      },
+        {
+          "language" : "fr-CH",
+          "value" : "Inactif"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Inattiva"
+        }]
+    },
+    {
+      "code" : "resolved",
+      "display" : "Resolved",
+      "designation" : [{
+        "language" : "de-CH",
+        "value" : "Behoben"
+      },
+        {
+          "language" : "fr-CH",
+          "value" : "RÃ©solu"
+        },
+        {
+          "language" : "it-CH",
+          "value" : "Risolta"
+        }]
+    }]
+}
