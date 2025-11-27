@@ -6,7 +6,7 @@
   "name" : "CHAllergyIntoleranceConditionValueSet",
   "title" : "CH AllergyIntolerance Condition",
   "status" : "active",
-  "experimental" : false,
+  "experimental" : true,
   "date" : "2025-11-21T10:41:59+00:00",
   "publisher" : "HL7 Switzerland",
   "contact" : [{
