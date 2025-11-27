@@ -28,5 +28,6 @@ Value sets may be too large for the curl command to handle. For example
 fails, since the json file has 393 kB which is too large.
 
 ### Solution
-Send in chunks or zip the file. 
+Use zip files instead of json files.
+
 
