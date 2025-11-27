@@ -8,9 +8,9 @@ users can publish the value sets, concept maps and code systems.
 
 The terminology server api uses an API key from the repository to secure the call from the github action. 
 
-To setup a new repository:
+To setup a new repository as source for the terminology server:
 - create a new repository
-- manage users and access
-- create a new file called .github/workflows/ci.yml
-- generate a new API key from the repository Settings/Secrets and Variables/Actions
+- manage users and access in github
+- copy the action to the repository as .github/workflows/ci.yml
+- generate a new API key from the repository in `Settings/Secrets and Variables/Actions`
 - register the API key in the terminology server
