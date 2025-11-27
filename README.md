@@ -14,3 +14,19 @@ To setup a new repository as source for the terminology server:
 - copy the action to the repository as .github/workflows/ci.yml
 - generate a new API key from the repository in `Settings/Secrets and Variables/Actions`
 - register the API key in the terminology server
+
+
+# Open Issues
+
+## large value sets
+
+### Problem 
+Value sets may be too large for the curl command to handle. For example
+
+```curl -X POST -H "Content-Type: application/json" --data @CHAllergyIntoleranceCondition.json https://node-express-tracer.onrender.com/```
+
+fails, since the json file has 393 kB which is too large.
+
+### Solution
+Send in chunks or zip the file. 
+
