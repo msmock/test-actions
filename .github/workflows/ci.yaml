@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-
+  #TODO case distinction for value sets, code-systems and concept-maps using the path of the file
   changed_files:
 
     runs-on: ubuntu-latest  # windows-latest || macos-latest
