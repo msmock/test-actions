@@ -33,7 +33,13 @@ jobs:
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             if [[ $file =~ "/ValueSet/"  ]]; then
-              echo "store  $file"
+              echo "post  $file as valueSet"
+              curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
+            elif [[ $file =~ "/CodeSystem/"  ]]; then
+              echo "post $file as codeSystem"
+              curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
+            if [[ $file =~ "/ConceptMap/"  ]]; then
+              echo "post $file as conceptMap"
               curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
             else
               echo "skip $file"
