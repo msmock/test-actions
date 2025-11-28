@@ -33,7 +33,7 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            if [[ $file =~ \.json$ ]]; then
+            if [[ $file =~ "/ValueSet/"  ]]; then
               echo "store  $file"
               curl -X POST -H "Content-Type: application/json" -H "X-API-KEY: ${{ secrets.API_KEY }}" --data @$file https://node-express-tracer.onrender.com/
             else
