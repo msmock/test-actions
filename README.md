@@ -26,5 +26,59 @@ called on the terminology server. Files in folder with other names are ignored.
 To inspect data send from the action, use the following curl command:
 `curl -X PUT -H 'Content-type: application/json' --data '@CHAllergyIntoleranceCondition.json' https://node-express-tracer.onrender.com/`
 
+# Test with HAPI
+
+## Test ValueSet $validate-code with HAPI
+
+Validate code from HAPI:
+- use POST /CodeSystem to store the code system referenced from value set
+- use POST /ValueSet to store the value set
+- use GET /ValueSet/{id}/$validate-code in Swagger
+- set id to the numerical id as returned when saving the value set 
+- set code to the code to be validated (e.g., code2)
+- set system to the system as specified in the value set (e.g., http://hl7.org/fhir/test/CodeSystem/simple)
+
+Example code: 
+```  
+      {
+        "system": "http://hl7.org/fhir/test/CodeSystem/simple",
+        "version": "0.1.0",
+        "code": "code2",
+        "display": "Display 2"
+      }
+```
+
+Example output: 
+```
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "result",
+      "valueBoolean": true
+    },
+    {
+      "name": "message",
+      "valueString": "Code validation occurred using a ValueSet expansion that was pre-calculated at 2025-12-01T08:54:28.998+01:00"
+    },
+    {
+      "name": "display",
+      "valueString": "Display 2"
+    }
+  ]
+}
+```
+
+## Test ValueSet $expand with HAPI
+
+Expand value set from HAPI:
+- use POST /CodeSystem to store the code system referenced from value set
+- use POST /ValueSet/$expand to send the value set to be expanded
+
+see: 
+- input value set: test-expand.json
+- expanded from HAPI: test-expand-actual.json
+- expected from IG Test: test-expand-expected.json
+
 
 
