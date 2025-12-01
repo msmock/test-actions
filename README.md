@@ -28,17 +28,28 @@ To inspect data send from the action, use the following curl command:
 
 # Test with HAPI
 
+## Test ValueSet $expand with HAPI
+
+Expand value set from HAPI:
+- use POST /CodeSystem to store the code system referenced from value set
+- use POST /ValueSet/$expand to send the value set to be expanded
+
+see:
+- input value set: test-expand.json
+- expanded from HAPI: test-expand-actual.json
+- expected from IG Test: test-expand-expected.json
+
 ## Test ValueSet $validate-code with HAPI
 
 Validate code from HAPI:
 - use POST /CodeSystem to store the code system referenced from value set
 - use POST /ValueSet to store the value set
 - use GET /ValueSet/{id}/$validate-code in Swagger
-- set id to the numerical id as returned when saving the value set 
+- set id to the numerical id of the value set as returned when saving the value set (e.g., 1001)
 - set code to the code to be validated (e.g., code2)
 - set system to the system as specified in the value set (e.g., http://hl7.org/fhir/test/CodeSystem/simple)
 
-Example code: 
+Example code to be validated: 
 ```  
       {
         "system": "http://hl7.org/fhir/test/CodeSystem/simple",
@@ -48,7 +59,7 @@ Example code:
       }
 ```
 
-Example output: 
+Example output of $validate-code: 
 ```
 {
   "resourceType": "Parameters",
@@ -69,16 +80,10 @@ Example output:
 }
 ```
 
-## Test ValueSet $expand with HAPI
-
-Expand value set from HAPI:
-- use POST /CodeSystem to store the code system referenced from value set
-- use POST /ValueSet/$expand to send the value set to be expanded
-
-see: 
-- input value set: test-expand.json
-- expanded from HAPI: test-expand-actual.json
-- expected from IG Test: test-expand-expected.json
+Example http request: 
+```
+http://localhost:8080/fhir/ValueSet/1001/$validate-code?code=code2a&system=http%3A%2F%2Fhl7.org%2Ffhir%2Ftest%2FCodeSystem%2Fsimple
+```
 
 
 

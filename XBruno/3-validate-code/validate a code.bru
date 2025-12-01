@@ -1,0 +1,16 @@
+meta {
+  name: validate a code
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/fhir/ValueSet/1001/$validate-code?code=code2a&system=http%3A%2F%2Fhl7.org%2Ffhir%2Ftest%2FCodeSystem%2Fsimple
+  body: none
+  auth: none
+}
+
+query {
+  code: code2a
+  system: http%3A%2F%2Fhl7.org%2Ffhir%2Ftest%2FCodeSystem%2Fsimple
+}

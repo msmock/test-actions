@@ -3,7 +3,7 @@
   "language": "en",
   "id": "simple",
   "url": "http://hl7.org/fhir/test/CodeSystem/simple",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
@@ -91,11 +91,12 @@
           "definition": "My first second level code",
           "designation": [
             {
-              "use": {
-                "system": "http://hl7.org/fhir/test/CodeSystem/designations",
-                "code": "olde-english"
-              },
-              "value": "mine own first code yond's issue of the second code"
+              "language": "de-CH",
+              "value": "Code auf Level 2 der Hierarchie."
+            },
+            {
+              "language": "en-US",
+              "value": "Code on level 2 of hierarchy."
             }
           ],
           "property": [
