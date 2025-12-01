@@ -1,659 +1,733 @@
 {
-  "resourceType" : "ValueSet",
-  "id" : "DocumentEntry.formatCode",
-  "meta" : {
-    "lastUpdated" : "2024-11-20T10:13:55Z",
-    "source" : "https://art-decor.org/fhir/4.0/ch-epr-",
-    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+  "resourceType": "ValueSet",
+  "id": "DocumentEntry.formatCode",
+  "meta": {
+    "lastUpdated": "2024-11-20T10:13:55Z",
+    "source": "https://art-decor.org/fhir/4.0/ch-epr-",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
-    "valuePeriod" : {
-      "start" : "2024-11-19T16:26:40+01:00"
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod",
+      "valuePeriod": {
+        "start": "2024-11-19T16:26:40+01:00"
+      }
     }
-  }],
-  "url" : "http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.formatCode",
-  "identifier" : [{
-    "use" : "official",
-    "system" : "urn:ietf:rfc:3986",
-    "value" : "urn:oid:2.16.756.5.30.1.127.3.10.1.9"
-  }],
-  "version" : "3.2.0",
-  "name" : "DocumentEntryFormatCode",
-  "title" : "DocumentEntry.formatCode",
-  "status" : "active",
-  "experimental" : true,
-  "date" : "2025-05-21T19:27:50+00:00",
-  "publisher" : "HL7 Switzerland",
-  "contact" : [{
-    "name" : "HL7 Switzerland",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.hl7.ch/"
-    }]
-  },
-  {
-    "name" : "HL7 Switzerland",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.hl7.ch/",
-      "use" : "work"
-    }]
-  }],
-  "description" : "Document format as per Annex; EPRO-FDHA.       \t\tThis unambiguous code defines the format of the XDS document. Together with the mimetype, this should provide the potential consumer with sufficient information as to whether they are in a position to process the document.",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "CH"
-    }]
-  }],
-  "immutable" : false,
-  "copyright" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:oid:2.16.756.5.30.1.127.3.10.10",
-      "concept" : [{
-        "code" : "urn:che:epr:EPR_Unstructured_Document",
-        "display" : "Unstructured EPR document",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Unstrukturiertes EPD Dokument"
-        },
+  ],
+  "url": "http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.formatCode",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.756.5.30.1.127.3.10.1.9"
+    }
+  ],
+  "version": "3.2.0",
+  "name": "DocumentEntryFormatCode",
+  "title": "DocumentEntry.formatCode",
+  "status": "active",
+  "experimental": true,
+  "date": "2025-05-21T19:27:50+00:00",
+  "publisher": "HL7 Switzerland",
+  "contact": [
+    {
+      "name": "HL7 Switzerland",
+      "telecom": [
         {
-          "language" : "fr-CH",
-          "value" : "Document DEP non structuré"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Documento CIP non strutturato"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Unstructured EPR document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Document DEP betg structurà"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-vacd:immunization-administration:2022",
-        "display" : "CH VACD Immunization Administration",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH VACD Immunization Administration"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH VACD Immunization Administration"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH VACD Immunization Administration"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH VACD Immunization Administration"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH VACD Immunization Administration"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-vacd:vaccination-record:2022",
-        "display" : "CH VACD Vaccination Record",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH VACD Vaccination Record"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH VACD Vaccination Record"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH VACD Vaccination Record"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH VACD Vaccination Record"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH VACD Vaccination Record"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:medication-card:2023",
-        "display" : "CH EMED Medication Card document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Medication Card document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Medication Card document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Medication Card document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Medication Card document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Medication Card document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:mtp:2024",
-        "display" : "CH EMED Medication Treatment Plan document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Medication Treatment Plan document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Medication Treatment Plan document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Medication Treatment Plan document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Medication Treatment Plan document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Medication Treatment Plan document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:pre:2024",
-        "display" : "CH EMED Medication Prescription document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Medication Prescription document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Medication Prescription document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Medication Prescription document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Medication Prescription document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Medication Prescription document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:dis:2024",
-        "display" : "CH EMED Medication Dispense document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Medication Dispense document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Medication Dispense document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Medication Dispense document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Medication Dispense document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Medication Dispense document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:padv:2024",
-        "display" : "CH EMED Pharmaceutical Advice document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Pharmaceutical Advice document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Pharmaceutical Advice document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Pharmaceutical Advice document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Pharmaceutical Advice document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Pharmaceutical Advice document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-emed:pml:2024",
-        "display" : "CH EMED Medication List document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH EMED Medication List document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH EMED Medication List document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH EMED Medication List document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH EMED Medication List document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH EMED Medication List document"
-        }]
-      },
-      {
-        "code" : "urn:che:epr:ch-allergyintolerance:2024",
-        "display" : "CH AllergyIntolerance document",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CH AllergyIntolerance document"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CH AllergyIntolerance document"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CH AllergyIntolerance document"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CH AllergyIntolerance document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CH AllergyIntolerance document"
-        }]
-      }]
+          "system": "url",
+          "value": "https://www.hl7.ch/"
+        }
+      ]
     },
     {
-      "system" : "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-      "concept" : [{
-        "code" : "urn:ihe:rad:TEXT",
-        "display" : "XDS-I CDA Wrapped Text Report (XDS-I)",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CDA Wrapped Text Report"
-        },
+      "name": "HL7 Switzerland",
+      "telecom": [
         {
-          "language" : "de-CH",
-          "value" : "CDA Wrapped Text Report"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CDA Wrapped Text Report"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CDA Wrapped Text Report"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CDA Wrapped Text Report"
-        }]
-      },
-      {
-        "code" : "urn:ihe:rad:PDF",
-        "display" : "XDS-I PDF (XDS-I)",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "PDF Radiology Report"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "PDF Radiology Report"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "PDF Radiology Report"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "PDF Radiology Report"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "PDF Radiology Report"
-        }]
-      },
-      {
-        "code" : "urn:ihe:rad:CDA:ImagingReportStructuredHeadings:2013",
-        "display" : "XDS-I Imaging Report with Structured Headings (XDS-I)",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "CDA Imaging Report with Structured Headings"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "CDA Imaging Report with Structured Headings"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CDA Imaging Report with Structured Headings"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CDA Imaging Report with Structured Headings"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CDA Imaging Report with Structured Headings"
-        }]
-      },
-      {
-        "code" : "urn:ihe:iti:xds-sd:pdf:2008",
-        "display" : "Scanned Documents (PDF)",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "PDF embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "PDF embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "PDF embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "PDF embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "PDF embedded in CDA per XDS-SD profile"
-        }]
-      },
-      {
-        "code" : "urn:ihe:iti:xds-sd:text:2008",
-        "display" : "Scanned Documents (text)",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "Text embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "Text embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Text embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Text embedded in CDA per XDS-SD profile"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Text embedded in CDA per XDS-SD profile"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pharm:pml:2013",
-        "display" : "Community Medication List",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Community Medication List"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Community Medication List"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Community Medication List"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Community Medication List"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Community Medication List"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pharm:pre:2010",
-        "display" : "Community Prescription",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Community Prescription"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Community Prescription"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Community Prescription"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Community Prescription"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Community Prescription"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pharm:dis:2010",
-        "display" : "Community Dispense",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Community Dispense"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Community Dispense"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Community Dispense"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Community Dispense"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Community Dispense"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pharm:mtp:2015",
-        "display" : "Community Medication Treatment Plan",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Community Medication Treatment Plan"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Community Medication Treatment Plan"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Community Medication Treatment Plan"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Community Medication Treatment Plan"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Community Medication Treatment Plan"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pharm:padv:2010",
-        "display" : "Community Pharmaceutical Advice",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Community Pharmaceutical Advice"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Community Pharmaceutical Advice"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Community Pharmaceutical Advice"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Community Pharmaceutical Advice"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Community Pharmaceutical Advice"
-        }]
-      },
-      {
-        "code" : "urn:ihe:lab:xd-lab:2008",
-        "display" : "CDA Laboratory Report",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "CDA Laboratory Report"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "CDA Laboratory Report"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "CDA Laboratory Report"
-        },
-        {
-          "language" : "en-US",
-          "value" : "CDA Laboratory Report"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "CDA Laboratory Report"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pcc:ic:2009",
-        "display" : "Immunization Content (IC)",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Immunization Content (IC)"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Immunization Content (IC)"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Immunization Content (IC)"
-        },
-        {
-          "language" : "en-US",
-          "value" : "Immunization Content (IC)"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Immunization Content (IC)"
-        }]
-      },
-      {
-        "code" : "urn:ihe:iti:xds:2017:mimeTypeSufficient",
-        "display" : "MimeType sufficient",
-        "designation" : [{
-          "language" : "en-US",
-          "value" : "MimeType sufficient"
-        },
-        {
-          "language" : "de-CH",
-          "value" : "MimeType sufficient"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "MimeType sufficient"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "MimeType sufficient"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "MimeType sufficient"
-        }]
-      },
-      {
-        "code" : "urn:ihe:pcc:ic:2008",
-        "display" : "Immunization Registry Content (IRC)",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "Immunization Registry Content (IRC)"
-        },
-        {
-          "language" : "fr-CH",
-          "value" : "Immunization Registry Content (IRC)"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Immunization Registry Content (IRC)"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Immunization Registry Content (IRC)"
-        }]
-      }]
-    },
+          "system": "url",
+          "value": "https://www.hl7.ch/",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Document format as per Annex; EPRO-FDHA.       \t\tThis unambiguous code defines the format of the XDS document. Together with the mimetype, this should provide the potential consumer with sufficient information as to whether they are in a position to process the document.",
+  "jurisdiction": [
     {
-      "system" : "urn:oid:1.2.840.10008.2.6.1",
-      "concept" : [{
-        "code" : "1.2.840.10008.5.1.4.1.1.88.59",
-        "display" : "DICOM Manifest (DICOM KOS SOP Class UID)",
-        "designation" : [{
-          "language" : "de-CH",
-          "value" : "KOS Dokument"
-        },
+      "coding": [
         {
-          "language" : "fr-CH",
-          "value" : "Document KOS"
-        },
-        {
-          "language" : "it-CH",
-          "value" : "Documento KOS"
-        },
-        {
-          "language" : "en-US",
-          "value" : "IHE KOS document"
-        },
-        {
-          "language" : "rm-CH",
-          "value" : "Document KOS"
-        }]
-      }]
-    }]
+          "system": "urn:iso:std:iso:3166",
+          "code": "CH"
+        }
+      ]
+    }
+  ],
+  "immutable": false,
+  "copyright": "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/getsnomed-ct or info@snomed.org.",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.756.5.30.1.127.3.10.10",
+        "concept": [
+          {
+            "code": "urn:che:epr:EPR_Unstructured_Document",
+            "display": "Unstructured EPR document",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Unstrukturiertes EPD Dokument"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Document DEP non structuré"
+              },
+              {
+                "language": "it-CH",
+                "value": "Documento CIP non strutturato"
+              },
+              {
+                "language": "en-US",
+                "value": "Unstructured EPR document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Document DEP betg structurà"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+            "display": "CH VACD Immunization Administration",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH VACD Immunization Administration"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH VACD Immunization Administration"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH VACD Immunization Administration"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH VACD Immunization Administration"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH VACD Immunization Administration"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-vacd:vaccination-record:2022",
+            "display": "CH VACD Vaccination Record",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH VACD Vaccination Record"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH VACD Vaccination Record"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH VACD Vaccination Record"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH VACD Vaccination Record"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH VACD Vaccination Record"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:medication-card:2023",
+            "display": "CH EMED Medication Card document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Medication Card document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Medication Card document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Medication Card document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Medication Card document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Medication Card document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:mtp:2024",
+            "display": "CH EMED Medication Treatment Plan document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Medication Treatment Plan document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Medication Treatment Plan document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Medication Treatment Plan document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Medication Treatment Plan document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Medication Treatment Plan document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:pre:2024",
+            "display": "CH EMED Medication Prescription document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Medication Prescription document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Medication Prescription document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Medication Prescription document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Medication Prescription document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Medication Prescription document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:dis:2024",
+            "display": "CH EMED Medication Dispense document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Medication Dispense document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Medication Dispense document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Medication Dispense document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Medication Dispense document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Medication Dispense document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:padv:2024",
+            "display": "CH EMED Pharmaceutical Advice document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Pharmaceutical Advice document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Pharmaceutical Advice document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Pharmaceutical Advice document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Pharmaceutical Advice document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Pharmaceutical Advice document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-emed:pml:2024",
+            "display": "CH EMED Medication List document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH EMED Medication List document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH EMED Medication List document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH EMED Medication List document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH EMED Medication List document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH EMED Medication List document"
+              }
+            ]
+          },
+          {
+            "code": "urn:che:epr:ch-allergyintolerance:2024",
+            "display": "CH AllergyIntolerance document",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CH AllergyIntolerance document"
+              },
+              {
+                "language": "de-CH",
+                "value": "CH AllergyIntolerance document"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CH AllergyIntolerance document"
+              },
+              {
+                "language": "it-CH",
+                "value": "CH AllergyIntolerance document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CH AllergyIntolerance document"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+        "concept": [
+          {
+            "code": "urn:ihe:rad:TEXT",
+            "display": "XDS-I CDA Wrapped Text Report (XDS-I)",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CDA Wrapped Text Report"
+              },
+              {
+                "language": "de-CH",
+                "value": "CDA Wrapped Text Report"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CDA Wrapped Text Report"
+              },
+              {
+                "language": "it-CH",
+                "value": "CDA Wrapped Text Report"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CDA Wrapped Text Report"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:rad:PDF",
+            "display": "XDS-I PDF (XDS-I)",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "PDF Radiology Report"
+              },
+              {
+                "language": "de-CH",
+                "value": "PDF Radiology Report"
+              },
+              {
+                "language": "fr-CH",
+                "value": "PDF Radiology Report"
+              },
+              {
+                "language": "it-CH",
+                "value": "PDF Radiology Report"
+              },
+              {
+                "language": "rm-CH",
+                "value": "PDF Radiology Report"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:rad:CDA:ImagingReportStructuredHeadings:2013",
+            "display": "XDS-I Imaging Report with Structured Headings (XDS-I)",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "CDA Imaging Report with Structured Headings"
+              },
+              {
+                "language": "de-CH",
+                "value": "CDA Imaging Report with Structured Headings"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CDA Imaging Report with Structured Headings"
+              },
+              {
+                "language": "it-CH",
+                "value": "CDA Imaging Report with Structured Headings"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CDA Imaging Report with Structured Headings"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:iti:xds-sd:pdf:2008",
+            "display": "Scanned Documents (PDF)",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "PDF embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "de-CH",
+                "value": "PDF embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "fr-CH",
+                "value": "PDF embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "it-CH",
+                "value": "PDF embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "rm-CH",
+                "value": "PDF embedded in CDA per XDS-SD profile"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:iti:xds-sd:text:2008",
+            "display": "Scanned Documents (text)",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "Text embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "de-CH",
+                "value": "Text embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Text embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "it-CH",
+                "value": "Text embedded in CDA per XDS-SD profile"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Text embedded in CDA per XDS-SD profile"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pharm:pml:2013",
+            "display": "Community Medication List",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Community Medication List"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Community Medication List"
+              },
+              {
+                "language": "it-CH",
+                "value": "Community Medication List"
+              },
+              {
+                "language": "en-US",
+                "value": "Community Medication List"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Community Medication List"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pharm:pre:2010",
+            "display": "Community Prescription",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Community Prescription"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Community Prescription"
+              },
+              {
+                "language": "it-CH",
+                "value": "Community Prescription"
+              },
+              {
+                "language": "en-US",
+                "value": "Community Prescription"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Community Prescription"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pharm:dis:2010",
+            "display": "Community Dispense",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Community Dispense"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Community Dispense"
+              },
+              {
+                "language": "it-CH",
+                "value": "Community Dispense"
+              },
+              {
+                "language": "en-US",
+                "value": "Community Dispense"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Community Dispense"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pharm:mtp:2015",
+            "display": "Community Medication Treatment Plan",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Community Medication Treatment Plan"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Community Medication Treatment Plan"
+              },
+              {
+                "language": "it-CH",
+                "value": "Community Medication Treatment Plan"
+              },
+              {
+                "language": "en-US",
+                "value": "Community Medication Treatment Plan"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Community Medication Treatment Plan"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pharm:padv:2010",
+            "display": "Community Pharmaceutical Advice",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Community Pharmaceutical Advice"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Community Pharmaceutical Advice"
+              },
+              {
+                "language": "it-CH",
+                "value": "Community Pharmaceutical Advice"
+              },
+              {
+                "language": "en-US",
+                "value": "Community Pharmaceutical Advice"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Community Pharmaceutical Advice"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:lab:xd-lab:2008",
+            "display": "CDA Laboratory Report",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "CDA Laboratory Report"
+              },
+              {
+                "language": "fr-CH",
+                "value": "CDA Laboratory Report"
+              },
+              {
+                "language": "it-CH",
+                "value": "CDA Laboratory Report"
+              },
+              {
+                "language": "en-US",
+                "value": "CDA Laboratory Report"
+              },
+              {
+                "language": "rm-CH",
+                "value": "CDA Laboratory Report"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pcc:ic:2009",
+            "display": "Immunization Content (IC)",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Immunization Content (IC)"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Immunization Content (IC)"
+              },
+              {
+                "language": "it-CH",
+                "value": "Immunization Content (IC)"
+              },
+              {
+                "language": "en-US",
+                "value": "Immunization Content (IC)"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Immunization Content (IC)"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+            "display": "MimeType sufficient",
+            "designation": [
+              {
+                "language": "en-US",
+                "value": "MimeType sufficient"
+              },
+              {
+                "language": "de-CH",
+                "value": "MimeType sufficient"
+              },
+              {
+                "language": "fr-CH",
+                "value": "MimeType sufficient"
+              },
+              {
+                "language": "it-CH",
+                "value": "MimeType sufficient"
+              },
+              {
+                "language": "rm-CH",
+                "value": "MimeType sufficient"
+              }
+            ]
+          },
+          {
+            "code": "urn:ihe:pcc:ic:2008",
+            "display": "Immunization Registry Content (IRC)",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "Immunization Registry Content (IRC)"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Immunization Registry Content (IRC)"
+              },
+              {
+                "language": "it-CH",
+                "value": "Immunization Registry Content (IRC)"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Immunization Registry Content (IRC)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "urn:oid:1.2.840.10008.2.6.1",
+        "concept": [
+          {
+            "code": "1.2.840.10008.5.1.4.1.1.88.59",
+            "display": "DICOM Manifest (DICOM KOS SOP Class UID)",
+            "designation": [
+              {
+                "language": "de-CH",
+                "value": "KOS Dokument"
+              },
+              {
+                "language": "fr-CH",
+                "value": "Document KOS"
+              },
+              {
+                "language": "it-CH",
+                "value": "Documento KOS"
+              },
+              {
+                "language": "en-US",
+                "value": "IHE KOS document"
+              },
+              {
+                "language": "rm-CH",
+                "value": "Document KOS"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

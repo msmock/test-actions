@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "action-condition-kind",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet with URL \"ValueSet.url[http://hl7.org/fhir/ValueSet/action-condition-kind]\" was expanded using an in-memory expansion"
+      }
+    ]
+  },
+  "url": "http://hl7.org/fhir/ValueSet/action-condition-kind",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/action-condition-kind"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "2846d452-660e-44b4-ba74-1dd7d68ccdbd",
+    "timestamp": "2025-11-29T20:20:26+01:00",
+    "total": 3,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://hl7.org/fhir/action-condition-kind",
+        "version": "5.0.0",
+        "code": "applicability",
+        "display": "Applicability"
+      },
+      {
+        "system": "http://hl7.org/fhir/action-condition-kind",
+        "version": "5.0.0",
+        "code": "start",
+        "display": "Start"
+      },
+      {
+        "system": "http://hl7.org/fhir/action-condition-kind",
+        "version": "5.0.0",
+        "code": "stop",
+        "display": "Stop"
+      }
+    ]
+  }
+}

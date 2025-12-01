@@ -1,0 +1,119 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "action-condition-kind",
+  "meta": {
+    "lastUpdated": "2023-03-26T15:21:02.749+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "cds"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 3
+    }
+  ],
+  "url": "http://hl7.org/fhir/action-condition-kind",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.816"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.799"
+    }
+  ],
+  "version": "5.0.0",
+  "name": "ActionConditionKind",
+  "title": "Action Condition Kind",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-01-05T10:01:24+11:00",
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "Defines the kinds of conditions that can appear on actions.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/action-condition-kind",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "applicability",
+      "display": "Applicability",
+      "definition": "The condition describes whether or not a given action is applicable.",
+      "designation": [
+        {
+          "language": "de-CH",
+          "value": "Anwendbar"
+        },
+        {
+          "language": "en-US",
+          "value": "Usable"
+        }
+      ]
+    },
+    {
+      "code": "start",
+      "display": "Start",
+      "definition": "The condition is a starting condition for the action.",
+      "designation": [
+        {
+          "language": "de-CH",
+          "value": "Start"
+        },
+        {
+          "language": "en-US",
+          "value": "Start"
+        }
+      ]
+    },
+    {
+      "code": "stop",
+      "display": "Stop",
+      "definition": "The condition is a stop, or exit condition for the action.",
+      "designation": [
+        {
+          "language": "de-CH",
+          "value": "Stopp"
+        },
+        {
+          "language": "en-US",
+          "value": "Stop"
+        }
+      ]
+    }
+  ]
+}
