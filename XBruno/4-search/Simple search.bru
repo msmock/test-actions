@@ -1,0 +1,15 @@
+meta {
+  name: Simple search
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/fhir/CodeSystem?_content=Cholesterol
+  body: none
+  auth: none
+}
+
+query {
+  _content: Cholesterol
+}
